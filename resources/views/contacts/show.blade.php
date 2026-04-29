@@ -27,6 +27,7 @@
       </tr>
     </table>
 
+    @auth
     <div class="d-flex gap-2">
       <a href="{{ route('contacts.edit', $contact) }}" class="btn btn-warning">Edit</a>
 
@@ -37,6 +38,7 @@
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
     </div>
+    @endauth
   </div>
 </div>
 @endsection

@@ -30,7 +30,9 @@
           name="contact"
           class="form-control @error('contact') is-invalid @enderror"
           value="{{ old('contact', $contact->contact) }}"
-          maxlength="9">
+          maxlength="9"
+          pattern="\d{9}"
+          inputmode="numeric">
         @error('contact')
         <div class="invalid-feedback">{{ $message }}</div>
         @enderror
